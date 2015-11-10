@@ -3,7 +3,7 @@ from django.template import Context
 from addr_book.models import *
 
 # Create your views here.
-
+# hehe
 def total(lists):
     counter = 0
     for temp in lists:

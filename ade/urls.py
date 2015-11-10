@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from addr_book.views import *
 from django.contrib import admin
 admin.autodiscover()
-
+# aa
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'ade.views.home', name='home'),
