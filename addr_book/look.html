@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="first.css" type="text/css" />
+<title>图书数据库</title>
+</head>
+<body style="text-align:center;">
+<a href='/add'>图书添加</a>
+
+<a href='/search_author'>作者查找</a>
+<a href='/look'>浏览</a>
+<form method="get">
+<table border=1 align="center">
+ <tr>
+  <th>书名</th><th>出版社</th><th>出版日期</th><th>作者</th><th>价格</th><th>出版号</th><th>操作</th>
+ </tr>
+{% for book in book_list %}
+ <tr>
+  <td><a href='/information/?isbn={{book.ISBN}}'>{{ book.Title }}</a></td>
+  <td>{{ book.Publisher }}</td>
+  <td>{{ book.PublishDate }}</td>
+  <td>{{ book.Author.Name }}</td>
+  <td>{{ book.Price }}</td>
+  <td>{{ book.ISBN }}</td>
+  <td><a href='/update/?isbn={{ book.ISBN }}'>修改</a>|<a href='/delete/?isbn={{ book.ISBN }}'>删除</a></td>
+ </tr>
+{% endfor %}
+</table>
+</form>
+</body>
+</html> 

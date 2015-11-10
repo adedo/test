@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="first.css" type="text/css" />
+<title>图书数据库</title>
+</head>
+<body style="text-align:center;">
+<a href='/add'>图书添加</a>
+
+<a href='/search_author'>作者查找</a>
+<a href='/look'>浏览</a>
+<form method="get">
+<table border=1 align="center">
+ <tr>
+  <th>书名</th><th>出版社</th><th>出版日期</th><th>作者</th><th>价格</th><th>出版号</th><th>作者身份证号</th><th>年龄</th><th>国籍</th>
+ </tr>
+ <tr>
+  <td>{{ book_list.Title }}</td>
+  <td>{{ book_list.Publisher }}</td>
+  <td>{{ book_list.PublishDate }}</td>
+  <td>{{ book_list.Author.Name }}</td>
+  <td>{{ book_list.Price }}</td>
+  <td>{{ book_list.ISBN }}</td>
+  <td>{{ book_list.Author.AuthorID }}</td>
+  <td>{{ book_list.Author.Age }}</td>
+  <td>{{ book_list.Author.Country }}</td>
+ </tr>
+</table>
+</form>
+</body>
+</html> 
